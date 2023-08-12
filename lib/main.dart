@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:list_widget_demo/views/list_view_screen.dart';
+import 'package:list_widget_demo/views/list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +16,9 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const DashboardScreen());
+        home: const Scaffold(
+          body: SafeArea(child: ListWidget()),
+        )
+        );
   }
 }
